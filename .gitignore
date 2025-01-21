@@ -1,0 +1,25 @@
+# R specific
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# Output files
+*.csv
+*.tsv
+*.pdf
+*.png
+*.jpg
+*.html
+
+# System specific
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Temporary files
+*~
+*.swp
+*.swo

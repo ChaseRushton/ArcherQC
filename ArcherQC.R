@@ -99,7 +99,7 @@ lower_limit_flag <- 54     # Lower limit threshold for quality checks
 # Set up file paths for analysis
 folder<-5162
 run_name <- folder                                    # Use folder as run identifier
-base_path <- "P:/FromHPC/Archer_6.2"                 # Root path for all analyses
+base_path <- ""                 # Root path for all analyses
 full_path <- file.path(base_path, as.character(folder))  # Complete path to analysis folder
 print(full_path)
 #===============================================================================
@@ -113,7 +113,7 @@ if (write_all_graphs != "yes" && write_all_graphs != "no") {
 # Load and Process Historic Data
 #===============================================================================
 # Load historic data from file
-historic_data_long2 <- read.table('historic_data_by_run_long_5161.tsv', 
+historic_data_long2 <- read.table('', 
                                 sep = "\t",  
                                 header = TRUE, 
                                 stringsAsFactors = FALSE, 
@@ -156,7 +156,7 @@ gsp2_stats_df <- gsp2_stats_df[order(-gsp2_stats_df$Average_Count), ]
 #===============================================================================
 # Load Historic Statistics
 #===============================================================================
-historic_stats <- read.table('P:/FromHPC/Archer_6.2/historic_data_stats_by_primer_long.tsv', 
+historic_stats <- read.table('', 
                            sep = "\t",  
                            header = TRUE, 
                            stringsAsFactors = FALSE, 
@@ -224,7 +224,7 @@ job_table <- job_table %>%
 #===============================================================================
 # Filter Out Additional GSP2s
 #===============================================================================
-filterout <- read.csv("P:/FromHPC/Archer_6.2/misisnggsp2.csv")
+filterout <- read.csv("")
 job_table <- job_table[!(job_table$GSP2 %in% filterout$GSP2),]
 
 write.csv(job_table, "control.csv")
